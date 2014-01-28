@@ -22,4 +22,10 @@ public class ExpressionTest {
         Expression expression = new Expression(new Expression(3d), new Expression(3d), new Multiplication());
         assertEquals(9d, expression.evaluate());
     }
+
+    @Test
+    public void forEvaluatingDivisionOfTwoNumbers() throws Exception {
+        Expression expression = new Expression(new Expression(3d), new Expression(3d), new Division());
+        assertEquals(1d, expression.evaluate());
+    }
 }

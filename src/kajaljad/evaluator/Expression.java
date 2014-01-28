@@ -16,7 +16,6 @@ public class Expression {
         this.operator = operator;
     }
 
-
     public double evaluate() {
         return (value!=null) ? value : operator.operate(left,right);
     }
