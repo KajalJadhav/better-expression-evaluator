@@ -17,4 +17,9 @@ public class ExpressionTest {
         assertEquals(0d, expression.evaluate());
     }
 
+    @Test
+    public void forEvaluatingMultiplicationOfTwoNumbers() throws Exception {
+        Expression expression = new Expression(new Expression(3d), new Expression(3d), new Multiplication());
+        assertEquals(9d, expression.evaluate());
+    }
 }
