@@ -28,4 +28,10 @@ public class ExpressionTest {
         Expression expression = new Expression(new Expression(3d), new Expression(3d), new Division());
         assertEquals(1d, expression.evaluate());
     }
+
+    @Test
+    public void forEvaluatingExponentOfANumber() throws Exception {
+        Expression expression = new Expression(new Expression(10d), new Expression(2d), new Exponent());
+        assertEquals(100d, expression.evaluate());
+    }
 }
